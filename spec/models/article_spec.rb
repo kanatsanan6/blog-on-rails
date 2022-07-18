@@ -7,6 +7,7 @@ RSpec.describe Article, type: :model do
     subject { build(:article) }
 
     it { is_expected.to be_valid }
+    it { is_expected.to have_many(:comments) }
   end
 
   describe 'validations' do
